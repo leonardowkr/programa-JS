@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#hidden{
+            background-color: white;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+        }
+        div#shown{
+            margin: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: yellow;
+            height: 100px;
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="shown" onmouseover="mostrar()" onmouseout="desaparecer()">
+        ===Passe o mouse aqui ====
+    </div>
+    <div id="hidden">
+        <p>Fale conosco</p>
+        <p>Local</p>
+        <p>Join our discord</p>
+    </div>
+    <script>
+        function mostrar()
+        {
+            var p=document.getElementById('hidden')
+            p.style.background='black'
+            p.style.visibility='visible'
+            p.style.transitionDuration='2s'
+            p.style.transitionDelay='0.1s'
+        }
+        function desaparecer()
+        {
+            var p=document.getElementById('hidden')
+            p.style.backgroundColor='white'
+            p.style.visibility='hidden'
+            p.style.transitionDelay='0.1s'
+            p.style.transitionDuration='1s'
+        }
+    </script>
+</body>
+</html>
